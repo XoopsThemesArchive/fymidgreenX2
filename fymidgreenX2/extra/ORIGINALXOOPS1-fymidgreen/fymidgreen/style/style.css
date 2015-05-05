@@ -1,0 +1,55 @@
+/* FY MidGreen Style For Xoops */
+/* Edited by deya. (http://theme4u.simnext.com/) */
+body{
+background: #edf8ee;font:12px Verdana,Arial,Helvetica,sans-serif;
+scrollbar-3dlight-color: #cce1b2;
+scrollbar-arrow-color: #006400;
+scrollbar-darkshadow-color:#6d943a;
+scrollbar-face-color: #daf5da;
+scrollbar-highlight-color:#ffffff;
+scrollbar-shadow-color: #cffcd2;
+scrollbar-track-color: #f2f9f2;
+background-image : url(../imagens/bground.gif);
+}
+/* Xoops Style Config */
+.bg1 {background-color:#f4fff4}
+.bg2 {background-color:#426f37}
+.bg3 {background-color:#ecffed}
+.bg4 {background-color:#f4fff4}
+.bg5 {background-color:#b0d0ff}
+.bg6 {background-color:#eeffff}
+.bg7 {background-color:#ffffff}
+.fg1 {color:#ffff00; font-size:11px}
+.fg2 {color:#ff0000; font-size:11px}
+.fg3 {color:#008000; font-size:11px}
+font,th,td,p{font:12px Verdana,Arial,Helvetica,sans-serif}
+.bgtitle{background-image : url(../imagens/bg_titlebk.gif);}
+.logobk{background-color : #315129;}
+.forumline{background: #f7f7f7;border: 1px solid #315129;}
+.headline{background-image : url(../imagens/bg_cell1.gif);height : 20px;font:12px Verdana,Arial,Helvetica,sans-serif;}
+.gensmall{font:10px Verdana,Arial,Helvetica,sans-serif;}
+TH{
+font:12px Verdana,Arial,Helvetica,sans-serif;
+font-weight : lighter;
+background-image : url(../imagens/bg_cell2.gif);
+color : white;
+letter-spacing : 1px;
+font-family : Verdana,sans-serif,Tahoma;
+}
+/* General page style. The scroll bar colours only visible in IE5.5+ */
+a:link,a:active,a:visited,a.postlink{color:#315129;text-decoration:none}
+a:hover{color:#ff9900;text-decoration:none}
+hr{border:0px solid #315129;border-top-width:1px;height:0px}
+/* Category gradients*/
+td.cat{font-weight:bold;letter-spacing:1px;background:#daf5da;height:22px}
+td.cathead2{font-weight:bold;letter-spacing:1px;background:#daf5da url(../imagens/bg_cell2.gif);}
+/* Quote blocks */
+.quote{background:#fafafa;border:1px solid #a6e9a7;color:#444444;
+font-size:11px;line-height:125%}
+/* Code blocks */
+.code{background:#fafafa;border: 1px solid #a6e9a7;color:#006600;
+font:11px Courier,"Courier New",sans-serif;padding:5px}
+/* Form elements */
+form{display:inline}
+/* Fancy form styles for IE */
+input,textarea,select{border:1px solid #315129;}

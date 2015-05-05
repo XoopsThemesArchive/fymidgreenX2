@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body onLoad="goforit()">
+<table border="0" width="100%" cellspacing="0" cellpadding="0" background="<{$xoops_imageurl}>bg_titlebk.gif">
+<tr>
+<td width="228"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>logo.gif" width="228" height="76"></td>
+<td width="100%" background="<{$xoops_imageurl}>bg_titlebk.gif"><table border="0" width="100%"
+cellspacing="0" cellpadding="0">
+<tr>
+<td id="headerbanner" width="100%"><p align="center"><{$xoops_banner}></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" background="<{$xoops_imageurl}>bg_cell1.gif">
+<tr>
+<td width="5%">Welcome!</td>
+<td width="70%"></td>
+<td width="25%"><p align="right"><script>
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+function getthedate(){
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var hours=mydate.getHours()
+var minutes=mydate.getMinutes()
+var seconds=mydate.getSeconds()
+var dn="AM"
+if (hours>=12)
+dn="PM"
+if (hours>12){
+hours=hours-12
+}
+if (hours==0)
+hours=12
+if (minutes<=9)
+minutes="0"+minutes
+if (seconds<=9)
+seconds="0"+seconds
+//change font size here
+var cdate="<small><font color='000000' face='Arial'><b>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+" "+hours+":"+minutes+":"+seconds+" "+dn
++"</b></font></small>"
+if (document.all)
+document.all.clock.innerHTML=cdate
+else if (document.getElementById)
+document.getElementById("clock").innerHTML=cdate
+else
+document.write(cdate)
+}
+if (!document.all&&!document.getElementById)
+getthedate()
+function goforit(){
+if (document.all||document.getElementById)
+setInterval("getthedate()",1000)
+}
+</script>
+<span id="clock"></span></td>
+</tr>
+</table><br>
+
+
+ <table cellspacing="0">
+ <tr>
+ <td id="leftcolumn" valign="top">
+ <!-- Start left blocks loop -->
+ <{foreach item=block from=$xoops_lblocks}>
+ <{include file="fymidgreenX2/theme_blockleft.html"}>
+ <{/foreach}>
+ <!-- Fim do "loop" dos blocos da esquerda -->
+
+ </td>
+
+ <td id="centercolumn" valign="top">
+
+ <!-- Display center blocks if any -->
+ <{if $xoops_showcblock == 1}>
+
+ <table cellspacing="0" valign="top">
+ <tr>
+ <td id="centerCcolumn" colspan="2" valign="top">
+
+ <!-- Start center-center blocks loop -->
+ <{foreach item=block from=$xoops_ccblocks}>
+ <{include file="fymidgreenX2/theme_blockcenter_c.html"}>
+ <{/foreach}>
+ <!-- End center-center blocks loop -->
+
+ </td>
+ </tr>
+ <tr>
+ <td id="centerLcolumn">
+
+ <!-- Start center-left blocks loop -->
+ <{foreach item=block from=$xoops_clblocks}>
+ <{include file="fymidgreenX2/theme_blockcenter_l.html"}>
+ <{/foreach}>
+ <!-- End center-left blocks loop -->
+
+ </td><td id="centerRcolumn">
+
+ <!-- Start center-right blocks loop -->
+ <{foreach item=block from=$xoops_crblocks}>
+ <{include file="fymidgreenX2/theme_blockcenter_r.html"}>
+ <{/foreach}>
+ <!-- End center-right blocks loop -->
+
+ </td>
+ </tr>
+ </table>
+
+ <{/if}>
+ <!-- End display center blocks -->
+
+ <div id="content">
+ <{$xoops_contents}>
+ </div>
+ </td>
+
+ <{if $xoops_showrblock == 1}>
+
+ <td id="rightcolumn" valign="top">
+ <!-- Início dos blocos da direita -->
+ <{foreach item=block from=$xoops_rblocks}>
+ <{include file="fymidgreenX2/theme_blockright.html"}>
+ <{/foreach}>
+ <!-- End right blocks loop -->
+ </td>
+
+ <{/if}>
+
+ </tr>
+ </table>
+
+ <table cellspacing="0">
+ <tr id="footerbar">
+ <td><a href="http://xoops.underpop.com/" target="_blank">Xoops</a></td>
+ </tr>
+ </table>
+</body>
+</html>
